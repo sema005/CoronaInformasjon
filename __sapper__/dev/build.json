@@ -2,18 +2,16 @@
   "bundler": "webpack",
   "shimport": null,
   "assets": {
-    "blog": "7bf81c05dcd1c21fcb0a/blog.blog.js",
-    "blog_$slug": "7bf81c05dcd1c21fcb0a/blog_$slug.blog_$slug.js",
-    "index": "7bf81c05dcd1c21fcb0a/index.index.js",
-    "main": "7bf81c05dcd1c21fcb0a/main.js",
-    "search": "7bf81c05dcd1c21fcb0a/search.search.js"
+    "favourites": "a1e5f83e783bc258e4f8/favourites.favourites.js",
+    "index": "a1e5f83e783bc258e4f8/index.index.js",
+    "main": "a1e5f83e783bc258e4f8/main.js",
+    "search": "a1e5f83e783bc258e4f8/search.search.js"
   },
   "css": {
     "chunks": {
       "index.svelte": [],
-      "search.svelte": [],
-      "blog/index.svelte": [],
-      "blog/[slug].svelte": []
+      "favourites.svelte": [],
+      "search.svelte": []
     }
   }
 }
