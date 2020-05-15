@@ -23,7 +23,7 @@
 
 	let order = "title"
     $:  switch(order){      
-            case 'title': world = world.sort( (a,b) => a.Country > b.Country ? 1 : -1);break
+		case 'title': world = world.sort( (a,b) => a.Country > b.Country ? 1 : -1);break
             case 'death': world = world.sort( (a,b) => a.TotalDeaths < b.TotalDeaths ? 1 : -1); break
             case 'infected': world = world.sort( (a,b) => a.TotalConfirmed < b.TotalConfirmed ? 1 : -1); break
             case 'recovered': world = world.sort( (a,b) => a.TotalRecovered < b.TotalRecovered ? 1 : -1); break
@@ -32,14 +32,29 @@
 
 
 
+	const activeClass = () => {
+
+		if(this.classList.contains("active")) {
+			this.classList.remove("active")
+		}else this.classList.add("active")
+	}
+
+
+
 </script>
 
 <div>
-	<div class="sort">
+	<div class="sort" id="myDiv">
+		<!--
 		<button class="btn button active" on:click={() => order = "title"}>Title</button>
     	<button class="btn button" on:click={() => order = "death"}>Death</button>
     	<button class="btn button" on:click={() => order = "infected"}>Infected</button>
     	<button class="btn button" on:click={() => order = "recovered"}>Recovered</button>
+		-->
+		<button class="btn button" on:click={activeClass()} >Title</button>
+    	<button class="btn button" on:click={activeClass()} >Death</button>
+    	<button class="btn button" on:click={activeClass()} >Infected</button>
+    	<button class="btn button" on:click={activeClass()} >Recovered</button>
 	</div>
 	<section>
 		{#each world as item}
