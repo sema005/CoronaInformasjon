@@ -6,7 +6,6 @@
 	import { onMount } from "svelte"
     import Loader from "../components/Loader.svelte"
     import Information from "../components/Information.svelte"
-    import SearchBar from "../components/SearchBar.svelte"
     import Chart from "../compontents/Chart.svelte"
     let world = []
     let searched = []
@@ -27,8 +26,9 @@
 
 
 <div class="search">
-
-    <SearchBar searched={searched} world={world} />
+    <div class="searchbar">
+        <input autocomplete="off"  class="search-input" type="search" placeholder="Search after country" bind:value={search} on:change|preventDefault={filterResult}/>
+    </div>
     <section>
     {#each searched as item}
 		<article>
@@ -51,6 +51,21 @@
         background-color: #1b1b30; 
         width: 100vw;
     }
+        .searchbar {
+        align-content: center;
+        width: 100vw;
+        text-align: center;
+    }
+        .search-input {
+        border-radius: 4px;
+        border: 1px solid black;
+        padding: 1rem;
+        font-size: 20px;
+        margin: 15px;
+        outline: none;
+        width: 30rem;
+    }
+
     section{
 		display: grid;
         grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
