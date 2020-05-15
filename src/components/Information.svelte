@@ -70,8 +70,7 @@ export let item
     .img-container {
         height: 50px;
         width: 50px;
-        display: grid; 
-        justify-content: center;
+        margin: auto;
     }
 
     img {

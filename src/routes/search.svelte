@@ -56,12 +56,12 @@
         background-color: #1b1b30; 
         width: 100vw;
     }
-        .searchbar {
+    .searchbar {
         align-content: center;
         width: 100vw;
         text-align: center;
     }
-        .search-input {
+    .search-input {
         border-radius: 4px;
         border: 1px solid black;
         padding: 1rem;
@@ -89,8 +89,7 @@
     }
     .container-article {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px 1fr));
-        height: 100%
+        grid-template-columns: 1fr 2fr;
     }
     .headline {
         text-align: center;
