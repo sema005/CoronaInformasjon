@@ -16,7 +16,6 @@ export let item
 	article {
 		background-color: rgba(4, 4, 4, .6);
 		padding: 1rem;
-		height: 87%;
 	}
 	.white {
 		color: white;
