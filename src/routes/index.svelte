@@ -45,16 +45,10 @@
 
 <div>
 	<div class="sort" id="myDiv">
-		<!--
 		<button class="btn button active" on:click={() => order = "title"}>Title</button>
     	<button class="btn button" on:click={() => order = "death"}>Death</button>
     	<button class="btn button" on:click={() => order = "infected"}>Infected</button>
     	<button class="btn button" on:click={() => order = "recovered"}>Recovered</button>
-		-->
-		<button class="btn button" on:click={activeClass()} >Title</button>
-    	<button class="btn button" on:click={activeClass()} >Death</button>
-    	<button class="btn button" on:click={activeClass()} >Infected</button>
-    	<button class="btn button" on:click={activeClass()} >Recovered</button>
 	</div>
 	<section>
 		{#each world as item}
@@ -72,7 +66,6 @@
 		display: grid;
 		background-color: #1b1b30;
 		width: 100vw;
-		height: 100vh;
 		grid-auto-rows: 10vh 80vh;
 	}
 	section {
@@ -81,9 +74,7 @@
 		justify-content: center;
 		gap: 2rem;
 		width: 90vw;
-		height: 80vh;
 		margin: auto;
-		overflow: scroll;	
 	}
 		.sort {
 		height: 10vh;
@@ -102,7 +93,7 @@
 		outline: none;
 	}
 	.active {
-		background-color: red;
+		background-color: rgba(4, 4, 4, .6);
 	}
 	.loader {
 		display: grid;
