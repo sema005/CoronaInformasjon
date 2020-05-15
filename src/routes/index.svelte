@@ -32,14 +32,6 @@
 
 
 
-	const activeClass = () => {
-
-		if(this.classList.contains("active")) {
-			this.classList.remove("active")
-		}else this.classList.add("active")
-	}
-
-
 
 </script>
 
@@ -66,7 +58,6 @@
 		display: grid;
 		background-color: #1b1b30;
 		width: 100vw;
-		grid-auto-rows: 10vh 80vh;
 	}
 	section {
 		display: grid;
@@ -76,7 +67,7 @@
 		width: 90vw;
 		margin: auto;
 	}
-		.sort {
+	.sort {
 		height: 10vh;
 		display: grid;
 		grid-template-columns: 100px 100px 100px 100px;
