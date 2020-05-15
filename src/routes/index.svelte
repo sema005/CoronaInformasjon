@@ -5,6 +5,7 @@
 <script>
 	import { onMount } from "svelte"
 	import Loader from "../components/Loader.svelte"
+	import World from "../components/World.svelte"
 
 	let world = []
 
@@ -41,14 +42,7 @@
 	</div>
 	<section>
 		{#each world as item}
-			<a href=" ">
-			<article>
-				<h1 class="white">{item.Country}</h1>
-				<p class="orange">Total infected: {item.TotalConfirmed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
-				<p class="red">Total deaths: {item.TotalDeaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
-				<p class="green">Total recovered: {item.TotalRecovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
-			</article>		
-			</a>
+			<World item={item} />
 		{:else}
 			<div class="loader">
 				<Loader />
@@ -93,30 +87,6 @@
 		height: 80vh;
 		margin: auto;
 		overflow: scroll;	
-	}
-	a {
-		text-decoration: none;
-	}
-
-	a:hover {
-		background-color: white;
-	}
-	article {
-		background-color: rgba(4, 4, 4, .6);
-		padding: 1rem;
-		height: 87%;
-	}
-	.white {
-		color: white;
-	}
-	.green {
-		color: green;
-	}
-	.red {
-		color: red;
-	}
-	.orange {
-		color: orange;
 	}
 	.loader {
 		display: grid;
