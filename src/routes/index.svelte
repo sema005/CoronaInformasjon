@@ -7,6 +7,7 @@
 	import Loader from "../components/Loader.svelte"
 	import World from "../components/World.svelte"
 
+
 	let world = []
 
 
@@ -20,7 +21,6 @@
         ).catch((err) => console.log(err))
 	} )
 
-
 	let order = "title"
     $:  switch(order){      
             case 'title': world = world.sort( (a,b) => a.Country > b.Country ? 1 : -1);break
@@ -28,7 +28,7 @@
             case 'infected': world = world.sort( (a,b) => a.TotalConfirmed < b.TotalConfirmed ? 1 : -1); break
             case 'recovered': world = world.sort( (a,b) => a.TotalRecovered < b.TotalRecovered ? 1 : -1); break
 	}
-	
+
 
 
 </script>
@@ -36,9 +36,9 @@
 <div>
 	<div class="sort">
 		<button class="button" on:click={() => order = "title"}>Title</button>
-        <button class="button" on:click={() => order = "death"}>Death</button>
-        <button class="button" on:click={() => order = "infected"}>Infected</button>
-        <button class="button" on:click={() => order = "recovered"}>Recovered</button>
+    	<button class="button" on:click={() => order = "death"}>Death</button>
+    	<button class="button" on:click={() => order = "infected"}>Infected</button>
+    	<button class="button" on:click={() => order = "recovered"}>Recovered</button>
 	</div>
 	<section>
 		{#each world as item}
@@ -59,9 +59,17 @@
 		height: 100vh;
 		grid-auto-rows: 10vh 80vh;
 	}
-
-
-	.sort {
+	section {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		justify-content: center;
+		gap: 2rem;
+		width: 90vw;
+		height: 80vh;
+		margin: auto;
+		overflow: scroll;	
+	}
+		.sort {
 		height: 10vh;
 		display: grid;
 		grid-template-columns: 100px 100px 100px 100px;
@@ -76,17 +84,6 @@
 		background-color: indigo;
 		color: white;
 		outline: none;
-	}
-
-	section {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-		justify-content: center;
-		gap: 2rem;
-		width: 90vw;
-		height: 80vh;
-		margin: auto;
-		overflow: scroll;	
 	}
 	.loader {
 		display: grid;
