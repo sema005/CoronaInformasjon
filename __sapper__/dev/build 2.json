@@ -1,0 +1,17 @@
+{
+  "bundler": "webpack",
+  "shimport": null,
+  "assets": {
+    "favourites": "193e87f9ded5bfe6e08f/favourites.favourites.js",
+    "index": "193e87f9ded5bfe6e08f/index.index.js",
+    "main": "193e87f9ded5bfe6e08f/main.js",
+    "search": "193e87f9ded5bfe6e08f/search.search.js"
+  },
+  "css": {
+    "chunks": {
+      "index.svelte": [],
+      "favourites.svelte": [],
+      "search.svelte": []
+    }
+  }
+}
