@@ -68,4 +68,4 @@ class Favourites extends svelte_internal__WEBPACK_IMPORTED_MODULE_0__["SvelteCom
 /***/ })
 
 }]);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhOGU0ZGM0YTg0ODdmZDc1NjQ4YS9mYXZvdXJpdGVzLmZhdm91cml0ZXMuanMiLCJzb3VyY2VzQ29udGVudCI6W10sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJlNDJhZDBjOWQzZDU3ZTM2ZjQ1MS9mYXZvdXJpdGVzLmZhdm91cml0ZXMuanMiLCJzb3VyY2VzQ29udGVudCI6W10sInNvdXJjZVJvb3QiOiIifQ==
