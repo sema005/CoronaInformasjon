@@ -6,7 +6,7 @@
 	import { onMount } from "svelte"
     import Loader from "../components/Loader.svelte"
     import Information from "../components/Information.svelte"
-    import Chart from "../compontents/Chart.svelte"
+    import Chart from "../components/Chart.svelte"
     let world = []
     let searched = []
 
