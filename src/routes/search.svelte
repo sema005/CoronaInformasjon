@@ -20,7 +20,12 @@
             searched = world
         }
         ).catch((err) => console.log(err))
-	} )
+    } )
+    
+    let search = ""
+    const filterResult = () => {
+        searched = world.filter( world => world.Country.toLowerCase().includes(search.toLowerCase()))
+    }
 
 </script>
 
