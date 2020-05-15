@@ -31,14 +31,15 @@
 
 
 
+
 </script>
 
 <div>
 	<div class="sort">
-		<button class="button" on:click={() => order = "title"}>Title</button>
-    	<button class="button" on:click={() => order = "death"}>Death</button>
-    	<button class="button" on:click={() => order = "infected"}>Infected</button>
-    	<button class="button" on:click={() => order = "recovered"}>Recovered</button>
+		<button class="btn button active" on:click={() => order = "title"}>Title</button>
+    	<button class="btn button" on:click={() => order = "death"}>Death</button>
+    	<button class="btn button" on:click={() => order = "infected"}>Infected</button>
+    	<button class="btn button" on:click={() => order = "recovered"}>Recovered</button>
 	</div>
 	<section>
 		{#each world as item}
@@ -84,6 +85,9 @@
 		background-color: indigo;
 		color: white;
 		outline: none;
+	}
+	.active {
+		background-color: red;
 	}
 	.loader {
 		display: grid;
