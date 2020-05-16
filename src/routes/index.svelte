@@ -46,9 +46,7 @@
 		{#each world as item}
 			<World item={item} />
 		{:else}
-			<div class="loader">
-				<Loader />
-			</div>
+			<Loader />
 		{/each}   
 	</section>
 </div>
@@ -59,14 +57,15 @@
 		background-color: #1b1b30;
 		width: 100vw;
 	}
-	section {
+    section{
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-		justify-content: center;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(5, 1fr);
+        justify-content: center;
 		gap: 2rem;
-		width: 90vw;
-		margin: auto;
-	}
+        margin: auto;
+		width: 80vw;
+    }
 	.sort {
 		height: 10vh;
 		display: grid;
@@ -85,10 +84,6 @@
 	}
 	.active {
 		background-color: rgba(4, 4, 4, .6);
-	}
-	.loader {
-		display: grid;
-		justify-content: center;
 	}
 </style>
 

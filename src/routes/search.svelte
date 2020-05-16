@@ -32,7 +32,7 @@
 
 <div class="search">
     <div class="searchbar">
-        <input autocomplete="off"  class="search-input" type="search" placeholder="Search after country" bind:value={search} on:change|preventDefault={filterResult}/>
+        <input autocomplete="off"  class="search-input" type="search" placeholder="Search after country" bind:value={search} on:input|preventDefault={filterResult}/>
     </div>
     <section>
     {#each searched as item}
@@ -40,7 +40,7 @@
 			<h1 class="headline">{item.Country}</h1>
             <div class="container-article">
                 <Information item={item} />
-                <Chart item={item} />
+                <!--<Chart item={item} /> -->
             </div>
 		</article>		
 	{:else}
