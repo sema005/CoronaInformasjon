@@ -55,6 +55,7 @@
         padding: 10px;
         background-color: #1b1b30; 
         width: 100vw;
+        min-height: 100vh;
     }
     .searchbar {
         align-content: center;
