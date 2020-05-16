@@ -33,10 +33,10 @@
 
 <div>
 	<div class="sort" id="myDiv">
-		<button class="btn button active" on:click={() => order = "title"}>Title</button>
-    	<button class="btn button" on:click={() => order = "death"}>Death</button>
-    	<button class="btn button" on:click={() => order = "infected"}>Infected</button>
-    	<button class="btn button" on:click={() => order = "recovered"}>Recovered</button>
+		<button aria-current="true" class="btn button active" on:click={() => order = "title"}>Title</button>
+    	<button aria-current="false" class="btn button" on:click={() => order = "death"}>Death</button>
+    	<button aria-current="false" class="btn button" on:click={() => order = "infected"}>Infected</button>
+    	<button aria-current="false" class="btn button" on:click={() => order = "recovered"}>Recovered</button>
 	</div>
 	<section>
 		{#each world as item}
@@ -81,6 +81,9 @@
 	}
 	.active {
 		background-color: rgba(4, 4, 4, .6);
+	}
+	[aria-current]::a{
+		background-color: red;
 	}
 </style>
 

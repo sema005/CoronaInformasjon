@@ -9,7 +9,6 @@
     import Chart from "../components/Chart.svelte"
     let world = []
     let searched = []
-    export let item = []
 
 
     onMount( async () => {
