@@ -9,6 +9,7 @@
     import Chart from "../components/Chart.svelte"
     let world = []
     let searched = []
+    export let item = []
 
 
     onMount( async () => {
@@ -77,7 +78,6 @@
         justify-content: center;
 		gap: 2rem;
         margin: auto;
-        overflow: scroll;
     }
     article {
         background-color: rgba(4, 4, 4, .6);

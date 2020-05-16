@@ -29,10 +29,6 @@
             case 'recovered': world = world.sort( (a,b) => a.TotalRecovered < b.TotalRecovered ? 1 : -1); break
 	}
 
-
-
-
-
 </script>
 
 <div>
@@ -56,6 +52,7 @@
 		display: grid;
 		background-color: #1b1b30;
 		width: 100vw;
+		justify-content: center;
 	}
     section{
 		display: grid;

@@ -1,11 +1,11 @@
 <script>
 
 export let item
-export let segment;
+export let segment
 
 </script>
 
-<a rel=prefetch aria-current='{segment === "search" ? "page" : undefined}' href='search'>
+<a rel=prefetch aria-current='{segment === "country" ? "page" : undefined}' href='country'>
 	<article>
 		<h1 class="white">{item.Country}</h1>
 		<p class="orange">Total infected: {item.TotalConfirmed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
@@ -13,6 +13,7 @@ export let segment;
 		<p class="green">Total recovered: {item.TotalRecovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
 	</article>		
 </a>
+
 
 <style>
 	article {
