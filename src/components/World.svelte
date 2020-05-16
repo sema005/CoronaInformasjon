@@ -1,7 +1,6 @@
 <script>
 
 export let item
-export let segment
 
 </script>
 
