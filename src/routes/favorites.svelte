@@ -1,6 +1,7 @@
 <script>
+	import { onMount } from "svelte"
     import {favorites} from "./index.svelte"
-    
+
 
 
 </script>
@@ -24,6 +25,7 @@
     div {
         min-height: 100vh;
         max-width: 100vw;;
+        background-color: #1b1b30;
     }
     h1 {
         text-align: center;

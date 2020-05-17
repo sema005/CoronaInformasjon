@@ -59,11 +59,14 @@
 	export let favorites = []
 
 	const addToFavorite = (item) => {
+		if(item.Country === favorites.find(item.Country)){
+			return;
+		}else {
 			favorites.push({
 				name: item.Country
 			})
-
 		console.log(favorites)
+		}
 	}
 
 
@@ -72,13 +75,15 @@
 		{order: "Death", orderType: "death"},
 		{order: "Infected", orderType: "infected"},
 		{order: "Recovered", orderType: "recovered"}
-
 	]
+
+
+	let x = document.activeElement.tagName;
 
 </script>
 
 <div>
-	<label for="btn" >Sort by:</label>
+	<label for="btn" >{x}</label>
 	<div class="sort" id="myDiv">
 	{#each buttons as button}
 		<button id="btn" class="button" on:click={() => order = `${button.orderType}`} >{button.order}</button>
