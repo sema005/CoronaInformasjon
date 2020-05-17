@@ -83,7 +83,7 @@
 </script>
 
 <div>
-	<label for="btn" >{x}</label>
+	<label for="btn" >Sort by:</label>
 	<div class="sort" id="myDiv">
 	{#each buttons as button}
 		<button id="btn" class="button" on:click={() => order = `${button.orderType}`} >{button.order}</button>
