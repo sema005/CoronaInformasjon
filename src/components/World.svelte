@@ -18,6 +18,8 @@ export let item
 		padding: 1rem;
 		border-radius: 10px;
 		display: grid;
+		max-width: 15rem;
+		max-height: 16rem;
 	}
 	article:hover {
 		background-color: rgba(4, 4, 4, .2);
