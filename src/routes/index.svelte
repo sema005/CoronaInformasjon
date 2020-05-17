@@ -9,6 +9,9 @@
 
 
 	let world = []
+	let searched = []
+
+
 
 
     onMount( async () => {
@@ -16,25 +19,33 @@
 		.then( response => response.json() )
         .then( json => {
 			// World
-            world = json.Countries
+			world = json.Countries
+			searched = world
         }
         ).catch((err) => console.log(err))
 	} )
 
 	let order = "title"
     $:  switch(order){      
-		case 'title': world = world.sort( (a,b) => a.Country > b.Country ? 1 : -1);break
-            case 'death': world = world.sort( (a,b) => a.TotalDeaths < b.TotalDeaths ? 1 : -1); break
-            case 'infected': world = world.sort( (a,b) => a.TotalConfirmed < b.TotalConfirmed ? 1 : -1); break
-            case 'recovered': world = world.sort( (a,b) => a.TotalRecovered < b.TotalRecovered ? 1 : -1); break
+		case 'title': searched = world.sort( (a,b) => a.Country > b.Country ? 1 : -1);break
+            case 'death': searched = world.sort( (a,b) => a.TotalDeaths < b.TotalDeaths ? 1 : -1); break
+            case 'infected': searched = world.sort( (a,b) => a.TotalConfirmed < b.TotalConfirmed ? 1 : -1); break
+            case 'recovered': searched = world.sort( (a,b) => a.TotalRecovered < b.TotalRecovered ? 1 : -1); break
 	}
 
+	    let search = ""
+    const filterResult = () => {
+		if(search === " "){
+			searched = world
+		}else {
+			searched = world.filter( world => world.Country.toLowerCase().includes(search.toLowerCase()))
+		}
+    }
 
+
+/*
 	const btnContainer = document.querySelector("#myDiv");
-	
-
-	const btns = btnContainer.getElementsByClassName("btn")
-
+	const btns = btnContainer.querySelector(".btn")
 	for(var i = 0; i < btns.length; i++) {
 		btns[i].addEventListener("click", function() {
 			var current = document.getElementsByClassName("active");
@@ -47,18 +58,31 @@
 		})
 	}
 
+*/
+
+	const buttons = [
+		{order: "Title", orderType: "title"},
+		{order: "Death", orderType: "death"},
+		{order: "Infected", orderType: "infected"},
+		{order: "Recovered", orderType: "recovered"}
+
+	]
 
 </script>
 
 <div>
+	<label for="btn" >Sort by:</label>
 	<div class="sort" id="myDiv">
-		<button aria-current="true" class="btn button active" on:click={() => order = "title"}>Title</button>
-    	<button aria-current="false" class="btn button" on:click={() => order = "death"}>Death</button>
-    	<button aria-current="false" class="btn button" on:click={() => order = "infected"}>Infected</button>
-    	<button aria-current="false" class="btn button" on:click={() => order = "recovered"}>Recovered</button>
+	{#each buttons as button}
+		<button id="btn" class="button" on:click={() => order = `${button.orderType}`} >{button.order}</button>
+	{/each}
+
 	</div>
+	<div class="searchbar">
+        <input autocomplete="off"  class="search-input" type="search" placeholder="Search after country" bind:value={search} on:input|preventDefault={filterResult}/>
+    </div>
 	<section>
-		{#each world as item}
+		{#each searched as item}
 			<World item={item} />
 		{:else}
 			<Loader />
@@ -75,22 +99,26 @@
 	}
     section{
 		display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         justify-content: center;
 		gap: 2rem;
         margin: auto;
-		width: 80vw;
+		width: 70vw;
 		min-height: 100vh;
     }
 	.sort {
-		height: 10vh;
 		display: grid;
 		grid-template-columns: 100px 100px 100px 100px;
 		gap: 10px;
 		width: 90vw;
 		margin: auto;
 		justify-content: center;
+	}
+	label {
+		color: white;
+		margin: auto;
 		padding: 1rem;
+		text-align: 1.9rem;
 	}
 	.button {
 		height: 30px;
@@ -98,11 +126,20 @@
 		color: white;
 		outline: none;
 	}
-	.active {
-		background-color: rgba(4, 4, 4, .6);
-	}
-	[aria-current]::a{
-		background-color: red;
-	}
+	.searchbar {
+        align-content: center;
+        width: 100vw;
+        text-align: center;
+    }
+    .search-input {
+        border-radius: 4px;
+        border: 1px solid black;
+        padding: 1rem;
+        font-size: 20px;
+        margin: 15px;
+        outline: none;
+        width: 30rem;
+    }
+
 </style>
 
