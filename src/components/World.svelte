@@ -1,11 +1,13 @@
 <script>
 
-export let item
+	export let item
+    export let addToFavorite
+
 
 </script>
 
 
-<article>
+<article  on:click={addToFavorite(item)}>
 	<h1 class="white">{item.Country}</h1>
 	<p class="text orange">Total infected: {item.TotalConfirmed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
 	<p class="text red">Total deaths: {item.TotalDeaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
@@ -37,8 +39,5 @@ export let item
 	}
 	.orange {
 		color: orange;
-	}
-	text {
-		font-size: 1.3rem;
 	}
 </style>

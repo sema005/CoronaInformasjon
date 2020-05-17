@@ -6,13 +6,11 @@
 	import { onMount } from "svelte"
 	import Loader from "../components/Loader.svelte"
 	import World from "../components/World.svelte"
+	export const favorites = []
 
 
 	let world = []
 	let searched = []
-
-
-
 
     onMount( async () => {
 		await fetch(`https://api.covid19api.com/summary`)
@@ -59,6 +57,14 @@
 	}
 
 */
+	const addToFavorite = (item) => {
+		favorites.push({
+			name: item.Country
+		})
+
+		console.log(favorites)
+	}
+
 
 	const buttons = [
 		{order: "Title", orderType: "title"},
@@ -83,7 +89,7 @@
     </div>
 	<section>
 		{#each searched as item}
-			<World item={item} />
+			<World item={item} addToFavorite={addToFavorite} />
 		{:else}
 			<Loader />
 		{/each}   
