@@ -6,7 +6,6 @@
 	import { onMount } from "svelte"
 	import Loader from "../components/Loader.svelte"
 	import World from "../components/World.svelte"
-	export const favorites = []
 
 
 	let world = []
@@ -57,10 +56,12 @@
 	}
 
 */
+	export let favorites = []
+
 	const addToFavorite = (item) => {
-		favorites.push({
-			name: item.Country
-		})
+			favorites.push({
+				name: item.Country
+			})
 
 		console.log(favorites)
 	}
