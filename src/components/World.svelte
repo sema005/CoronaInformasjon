@@ -32,9 +32,4 @@ export let item
 	.orange {
 		color: orange;
 	}
-    a {
-	    text-decoration: none;
-	}
-
-
 </style>

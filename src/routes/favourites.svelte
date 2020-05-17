@@ -1,15 +1,25 @@
 <script>
 
+    export let favorites = []
 
 
 </script>
 
-<div>
-    <h1 class="white ">Favorites</h1>
+{#if favorites.lenght === 0}
+    <p>U dont have any favorites yet</p>
+{:else}
     <div>
-        <p>Country name</p>
+       <h1 class="white ">Favorites</h1>
+       <div>
+        {#each favorites as favorite}
+           <p>Country name</p>
+           <ul>
+            <li>{favorite.name}</li> 
+           </ul>
+        {/each}
+       </div>
     </div>
-</div>
+{/if}
 
 
 <style>
