@@ -19,9 +19,9 @@
        <h1 class="white ">Favorites</h1>
         <section>
             <div>Name</div>
-            <div>Total infected</div>
-            <div>Total deaths</div>
-            <div>Total recovered</div>
+            <div class="orange">Total infected</div>
+            <div class="red">Total deaths</div>
+            <div class="green">Total recovered</div>
             <div></div>
         </section>
         {#each favoritesCountry as favorite}

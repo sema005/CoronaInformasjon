@@ -17,9 +17,9 @@
 </script>
     <section>
         <div>{favoritesCountry.name}</div>
-        <div>{favoritesCountry.infected}</div>
-        <div>{favoritesCountry.death}</div>
-        <div>{favoritesCountry.recovered}</div>
+        <div class="orange">{favoritesCountry.infected}</div>
+        <div class="red">{favoritesCountry.death}</div>
+        <div class="green">{favoritesCountry.recovered}</div>
         <button on:click={deleteFavorite}>Remove</button>
     </section>
 
@@ -41,5 +41,14 @@
         background-color: indigo;
         color: white;
         outline: none;
+    }
+    .orange {
+        color: orange
+    }
+    .red {
+        color: red;
+    }
+    .green {
+        color: green;
     }
 </style>
