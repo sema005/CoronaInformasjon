@@ -1,0 +1,21 @@
+{
+  "bundler": "webpack",
+  "shimport": null,
+  "assets": {
+    "country": "0b7b5cf28fa8e08b9093/country.country.js",
+    "favorites": "0b7b5cf28fa8e08b9093/favorites.favorites.js",
+    "index": "0b7b5cf28fa8e08b9093/index.index.js",
+    "main": "0b7b5cf28fa8e08b9093/main.js",
+    "search": "0b7b5cf28fa8e08b9093/search.search.js",
+    "vendors~country~favorites~index": "0b7b5cf28fa8e08b9093/vendors~country~favorites~index.vendors~country~favorites~index.js",
+    "vendors~search": "0b7b5cf28fa8e08b9093/vendors~search.vendors~search.js"
+  },
+  "css": {
+    "chunks": {
+      "index.svelte": [],
+      "favorites.svelte": [],
+      "country.svelte": [],
+      "search.svelte": []
+    }
+  }
+}
