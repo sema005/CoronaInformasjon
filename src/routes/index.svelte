@@ -10,14 +10,17 @@
 
 	let world = []
 	let searched = []
+	let AllOverWorld
 
-    onMount( async () => {
-		await fetch(`https://api.covid19api.com/summary`)
+    onMount( () => {
+		fetch(`Corona.json`)
 		.then( response => response.json() )
         .then( json => {
 			// World
 			world = json.Countries
 			searched = world
+			AllOverWorld  = json.Global
+			console.log(AllOverWorld)
         }
         ).catch((err) => console.log(err))
 	} )
@@ -59,7 +62,8 @@
 	export let favorites = []
 
 	const addToFavorite = (item) => {
-		if(item.Country === favorites.find(item.Country)){
+		const found = favorites.find(fav => fav.name === item.Country)
+		if(found){
 			return;
 		}else {
 			favorites.push({
@@ -97,7 +101,11 @@
 		{#each searched as item}
 			<World item={item} addToFavorite={addToFavorite} />
 		{:else}
+		<div></div>
+		<div></div>
 			<Loader />
+		<div></div>
+		<div></div>
 		{/each}   
 	</section>
 </div>

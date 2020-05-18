@@ -1,42 +1,40 @@
 <script>
     export let item
     import Highcharts from "highcharts";
-    import { onMount } from "svelte"
+    import {onMount} from "svelte"
 
+    let chart
 
-    
-    let chart 
-
-    onMount( () => {
+    onMount(() => {
         chart = new Highcharts.Chart({
             chart: {
-            renterTo: "container",
-            type: "pie"
-        },
-        title: {
-            title: "Overview"
-        },
-        series: [
-            {
-                name: "Overview",
-                data: [
-                    {
-                        name: "Death",
-                        y: item.TotalDeaths,
-                        color: "red"
-                    }, {
-                        name: "Infected",
-                        y: item.TotalInfected,
-                        color: "orange"
-                    }, {
-                        name: "Recovered",
-                        y: item.TotalRecovered,
-                        color: "green"
-                    }
-                ]
-            }
-        ]
-         })
+                renderTo: "container",
+                type: "pie"
+            },
+            title: {
+                title: "Overview"
+            },
+            series: [
+                {
+                    name: "Overview",
+                    data: [
+                        {
+                            name: "Death",
+                            y: item.TotalDeaths,
+                            color: "red"
+                        }, {
+                            name: "Infected",
+                            y: item.TotalConfirmed,
+                            color: "orange"
+                        }, {
+                            name: "Recovered",
+                            y: item.TotalRecovered,
+                            color: "green"
+                        }
+                    ]
+                }
+            ]
+        })
     })
     /*
     const options = {
@@ -69,8 +67,6 @@
         ]
     }
     */
-
-
 </script>
 
 <div id="container"></div>

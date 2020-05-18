@@ -12,7 +12,7 @@
 
 
     onMount( async () => {
-        await fetch(`https://api.covid19api.com/summary`)
+        await fetch(`Corona.json`)
         .then( response => response.json() )
         .then( json => {
             // World
@@ -40,7 +40,7 @@
 			<h1 class="headline">{item.Country}</h1>
             <div class="container-article">
                 <Information item={item} />
-                <!--<Chart item={item} /> -->
+                <!--<Chart item={item} />-->
             </div>
 		</article>		
 	{:else}

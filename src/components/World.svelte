@@ -1,17 +1,17 @@
 <script>
-
+	import { favorite } from "../routes/index.svelte"
 	export let item
-    export let addToFavorite
-
+	export let addToFavorite
 
 </script>
 
 
-<article  on:click={addToFavorite(item)}>
+<article >
 	<h1 class="white">{item.Country}</h1>
 	<p class="text orange">Total infected: {item.TotalConfirmed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
 	<p class="text red">Total deaths: {item.TotalDeaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
 	<p class="text green">Total recovered: {item.TotalRecovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
+	<button on:click={addToFavorite(item)} class="btn">Add to favorite</button>
 </article>		
 
 <style>
@@ -25,6 +25,14 @@
 	}
 	article:hover {
 		background-color: rgba(4, 4, 4, .2);
+	}
+	.btn {
+		border: 1px solid white;
+		background-color: indigo;
+		outline: none;
+		color: white;
+		width: 50%;
+		margin: auto;
 	}
 	.white {
 		color: white;
