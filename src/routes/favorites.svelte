@@ -1,37 +1,56 @@
 <script>
 	import { onMount } from "svelte"
-    import {favorites} from "./index.svelte"
+    import { db } from "../firestore.js"
+    import Favorite from "../components/Favorite.svelte"
 
+    const favorites = db.collection("favorites")
+
+    let favoritesCountry = []
+
+
+        favorites.onSnapshot(snap => {
+        favoritesCountry = snap.docs
+    })
 
 
 </script>
 
-    <div>
+    <div class="back">
        <h1 class="white ">Favorites</h1>
-       <div>
-        {#each favorites as favorite}
-           <p>Country name</p>
-           <ul>
-            <li>{favorite.name}</li> 
-           </ul>
+        <section>
+            <div>Name</div>
+            <div>Total infected</div>
+            <div>Total deaths</div>
+            <div>Total recovered</div>
+            <div></div>
+        </section>
+        {#each favoritesCountry as favorite}
+            <Favorite favoritesCountry={favorite.data()}/>
         {:else}
-            <p>U have no favorites...</p>
+            <p>U dont have any favorties yet</p>
         {/each}
-       </div>
     </div>
 
 
 <style>
-    div {
+    .back {
+        min-width: 100vw;
         min-height: 100vh;
-        max-width: 100vw;;
         background-color: #1b1b30;
     }
-    h1 {
-        text-align: center;
-    }
-
     .white {
         color: white;
+        margin: auto;
+    }
+    section{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr;
+        gap: 1rem;
+        padding: 1rem;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+        color: white;
+        width: 80vw;
+        margin: auto;
     }
 </style>

@@ -2,12 +2,13 @@
   "bundler": "webpack",
   "shimport": null,
   "assets": {
-    "country": "e90f3fc1cd03a3e09eb3/country.country.js",
-    "favorites": "e90f3fc1cd03a3e09eb3/favorites.favorites.js",
-    "index": "e90f3fc1cd03a3e09eb3/index.index.js",
-    "main": "e90f3fc1cd03a3e09eb3/main.js",
-    "search": "e90f3fc1cd03a3e09eb3/search.search.js",
-    "vendors~search": "e90f3fc1cd03a3e09eb3/vendors~search.vendors~search.js"
+    "country": "0b7b5cf28fa8e08b9093/country.country.js",
+    "favorites": "0b7b5cf28fa8e08b9093/favorites.favorites.js",
+    "index": "0b7b5cf28fa8e08b9093/index.index.js",
+    "main": "0b7b5cf28fa8e08b9093/main.js",
+    "search": "0b7b5cf28fa8e08b9093/search.search.js",
+    "vendors~country~favorites~index": "0b7b5cf28fa8e08b9093/vendors~country~favorites~index.vendors~country~favorites~index.js",
+    "vendors~search": "0b7b5cf28fa8e08b9093/vendors~search.vendors~search.js"
   },
   "css": {
     "chunks": {

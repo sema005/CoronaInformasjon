@@ -6,6 +6,7 @@
 	import { onMount } from "svelte"
 	import Loader from "../components/Loader.svelte"
 	import World from "../components/World.svelte"
+	import { db } from "../firestore.js"
 
 
 	let world = []
@@ -20,7 +21,6 @@
 			world = json.Countries
 			searched = world
 			AllOverWorld  = json.Global
-			console.log(AllOverWorld)
         }
         ).catch((err) => console.log(err))
 	} )
@@ -42,23 +42,7 @@
 		}
     }
 
-
 /*
-	const btnContainer = document.querySelector("#myDiv");
-	const btns = btnContainer.querySelector(".btn")
-	for(var i = 0; i < btns.length; i++) {
-		btns[i].addEventListener("click", function() {
-			var current = document.getElementsByClassName("active");
-
-			if(current.length > 0) {
-				current[0].className = current[0].className.replace(" active", "");
-			}
-
-			this.className += " active"
-		})
-	}
-
-*/
 	export let favorites = []
 
 	const addToFavorite = (item) => {
@@ -72,7 +56,16 @@
 		console.log(favorites)
 		}
 	}
-
+*/
+	const addToFavorite = (item) => {
+			db.collection("favorites")
+			.doc(item.Country).set({
+				name: item.Country,
+				death: item.TotalDeaths,
+				infected: item.TotalConfirmed,
+				recovered: item.TotalRecovered
+	})
+}
 
 	const buttons = [
 		{order: "Title", orderType: "title"},
