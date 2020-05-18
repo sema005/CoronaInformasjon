@@ -40,7 +40,7 @@
     }
     .white {
         color: white;
-        margin: auto;
+        text-align: center;
     }
     section{
         display: grid;
@@ -52,5 +52,9 @@
         color: white;
         width: 80vw;
         margin: auto;
+    }
+    p {
+        text-align: center;
+        color: white;
     }
 </style>
