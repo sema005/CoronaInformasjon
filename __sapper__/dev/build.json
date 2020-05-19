@@ -2,20 +2,17 @@
   "bundler": "webpack",
   "shimport": null,
   "assets": {
-    "country": "bbff20e2363e10616fe2/country.country.js",
-    "country~index": "bbff20e2363e10616fe2/country~index.country~index.js",
-    "favorites": "bbff20e2363e10616fe2/favorites.favorites.js",
-    "index": "bbff20e2363e10616fe2/index.index.js",
-    "main": "bbff20e2363e10616fe2/main.js",
-    "search": "bbff20e2363e10616fe2/search.search.js",
-    "vendors~country~favorites~index": "bbff20e2363e10616fe2/vendors~country~favorites~index.vendors~country~favorites~index.js",
-    "vendors~search": "bbff20e2363e10616fe2/vendors~search.vendors~search.js"
+    "favorites": "0d6d680aa83fd351731c/favorites.favorites.js",
+    "index": "0d6d680aa83fd351731c/index.index.js",
+    "main": "0d6d680aa83fd351731c/main.js",
+    "search": "0d6d680aa83fd351731c/search.search.js",
+    "vendors~favorites~index": "0d6d680aa83fd351731c/vendors~favorites~index.vendors~favorites~index.js",
+    "vendors~search": "0d6d680aa83fd351731c/vendors~search.vendors~search.js"
   },
   "css": {
     "chunks": {
       "index.svelte": [],
       "favorites.svelte": [],
-      "country.svelte": [],
       "search.svelte": []
     }
   }
