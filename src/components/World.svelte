@@ -2,8 +2,6 @@
 	export let item
 	export let addToFavorite
 	import { db } from "../firestore.js"
-	import Information from "./Information"
-	export let showMore
 
 	const favorites = db.collection("favorotes")
 

@@ -75,19 +75,6 @@
 	]
 
 
-
-
-
-	let test = 0
-
-	const showMore = (item) => {
-		test = 1
-	}
-
-	const closeShowMore = (item) => {
-		test = 0
-	}
-
 </script>
 
 <div>
@@ -103,7 +90,7 @@
     </div>
 	<section>
 		{#each searched as item}
-			<World item={item} showMore={showMore} addToFavorite={addToFavorite} />
+			<World item={item} addToFavorite={addToFavorite} />
 		{:else}
 			<Loader />
 		{/each}   
