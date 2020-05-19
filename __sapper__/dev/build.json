@@ -2,14 +2,14 @@
   "bundler": "webpack",
   "shimport": null,
   "assets": {
-    "country": "62beb211543eab83705b/country.country.js",
-    "country~index": "62beb211543eab83705b/country~index.country~index.js",
-    "favorites": "62beb211543eab83705b/favorites.favorites.js",
-    "index": "62beb211543eab83705b/index.index.js",
-    "main": "62beb211543eab83705b/main.js",
-    "search": "62beb211543eab83705b/search.search.js",
-    "vendors~country~favorites~index": "62beb211543eab83705b/vendors~country~favorites~index.vendors~country~favorites~index.js",
-    "vendors~search": "62beb211543eab83705b/vendors~search.vendors~search.js"
+    "country": "bbff20e2363e10616fe2/country.country.js",
+    "country~index": "bbff20e2363e10616fe2/country~index.country~index.js",
+    "favorites": "bbff20e2363e10616fe2/favorites.favorites.js",
+    "index": "bbff20e2363e10616fe2/index.index.js",
+    "main": "bbff20e2363e10616fe2/main.js",
+    "search": "bbff20e2363e10616fe2/search.search.js",
+    "vendors~country~favorites~index": "bbff20e2363e10616fe2/vendors~country~favorites~index.vendors~country~favorites~index.js",
+    "vendors~search": "bbff20e2363e10616fe2/vendors~search.vendors~search.js"
   },
   "css": {
     "chunks": {
