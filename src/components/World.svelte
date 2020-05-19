@@ -1,8 +1,9 @@
 <script>
-	import { favorite } from "../routes/index.svelte"
 	export let item
 	export let addToFavorite
 	import { db } from "../firestore.js"
+	import Information from "./Information"
+	export let showMore
 
 	const favorites = db.collection("favorotes")
 
@@ -24,7 +25,6 @@
 
 	const found = favoritesCountry.find(fav => fav.name === item.Country)
 
-
 </script>
 
 
@@ -38,6 +38,8 @@
 	{:else}
 		<button on:click={addToFavorite(item)} class="btn">Add to favorite</button>
 	{/if}
+
+
 </article>		
 
 <style>
@@ -47,7 +49,7 @@
 		border-radius: 10px;
 		display: grid;
 		max-width: 15rem;
-		max-height: 16rem;
+		max-height: 20rem;
 	}
 	article:hover {
 		background-color: rgba(4, 4, 4, .2);

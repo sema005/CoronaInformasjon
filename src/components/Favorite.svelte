@@ -17,9 +17,9 @@
 </script>
     <section>
         <div>{favoritesCountry.name}</div>
-        <div class="orange">{favoritesCountry.infected}</div>
-        <div class="red">{favoritesCountry.death}</div>
-        <div class="green">{favoritesCountry.recovered}</div>
+        <div class="orange">{favoritesCountry.infected.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div>
+        <div class="red">{favoritesCountry.death.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div>
+        <div class="green">{favoritesCountry.recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div>
         <button on:click={deleteFavorite}>Remove</button>
     </section>
 

@@ -7,6 +7,7 @@
     import Loader from "../components/Loader.svelte"
     import Information from "../components/Information.svelte"
     import Chart from "../components/Chart.svelte"
+    export let item
     let world = []
     let searched = []
 
@@ -21,21 +22,13 @@
         }
         ).catch((err) => console.log(err))
     } )
-    
-    let search = ""
-    const filterResult = () => {
-        searched = world.filter( world => world.Country.toLowerCase().includes(search.toLowerCase()))
-    }
+
 
 </script>
 
 
 <div class="search">
-    <div class="searchbar">
-        <input autocomplete="off"  class="search-input" type="search" placeholder="Search after country" bind:value={search} on:input|preventDefault={filterResult}/>
-    </div>
     <section>
-    {#each searched as item}
 		<article>
 			<h1 class="headline">{item.Country}</h1>
             <div class="container-article">
@@ -43,9 +36,6 @@
                 <!--<Chart item={item} />-->
             </div>
 		</article>		
-	{:else}
-		<Loader />
-	{/each}    
     </section>
 </div>
 
@@ -57,21 +47,6 @@
         width: 100vw;
         min-height: 100vh;
     }
-    .searchbar {
-        align-content: center;
-        width: 100vw;
-        text-align: center;
-    }
-    .search-input {
-        border-radius: 4px;
-        border: 1px solid black;
-        padding: 1rem;
-        font-size: 20px;
-        margin: 15px;
-        outline: none;
-        width: 30rem;
-    }
-
     section{
 		display: grid;
         grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));

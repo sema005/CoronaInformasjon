@@ -2,13 +2,15 @@
   "bundler": "webpack",
   "shimport": null,
   "assets": {
-    "country": "8a1fbfdba07b0f4b3970/country.country.js",
-    "favorites": "8a1fbfdba07b0f4b3970/favorites.favorites.js",
-    "index": "8a1fbfdba07b0f4b3970/index.index.js",
-    "main": "8a1fbfdba07b0f4b3970/main.js",
-    "search": "8a1fbfdba07b0f4b3970/search.search.js",
-    "vendors~country~favorites~index": "8a1fbfdba07b0f4b3970/vendors~country~favorites~index.vendors~country~favorites~index.js",
-    "vendors~search": "8a1fbfdba07b0f4b3970/vendors~search.vendors~search.js"
+    "country": "c041d03f3b6376e261a5/country.country.js",
+    "country~index": "c041d03f3b6376e261a5/country~index.country~index.js",
+    "country~index~search": "c041d03f3b6376e261a5/country~index~search.country~index~search.js",
+    "favorites": "c041d03f3b6376e261a5/favorites.favorites.js",
+    "index": "c041d03f3b6376e261a5/index.index.js",
+    "main": "c041d03f3b6376e261a5/main.js",
+    "search": "c041d03f3b6376e261a5/search.search.js",
+    "vendors~country~favorites~index": "c041d03f3b6376e261a5/vendors~country~favorites~index.vendors~country~favorites~index.js",
+    "vendors~search": "c041d03f3b6376e261a5/vendors~search.vendors~search.js"
   },
   "css": {
     "chunks": {

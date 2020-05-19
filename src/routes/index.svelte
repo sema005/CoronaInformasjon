@@ -7,6 +7,7 @@
 	import Loader from "../components/Loader.svelte"
 	import World from "../components/World.svelte"
 	import { db } from "../firestore.js"
+	import Test from "../components/search.svelte"
 
 
 	let world = []
@@ -75,7 +76,18 @@
 	]
 
 
-	let x = document.activeElement.tagName;
+
+
+
+	let test = 0
+
+	const showMore = (item) => {
+		test = 1
+	}
+
+	const closeShowMore = (item) => {
+		test = 0
+	}
 
 </script>
 
@@ -92,18 +104,16 @@
     </div>
 	<section>
 		{#each searched as item}
-			<World item={item} addToFavorite={addToFavorite} />
+			<World item={item} showMore={showMore} addToFavorite={addToFavorite} />
 		{:else}
-		<div></div>
-		<div></div>
 			<Loader />
-		<div></div>
-		<div></div>
 		{/each}   
 	</section>
+
 </div>
 
 <style>
+
 	div {
 		display: grid;
 		background-color: #1b1b30;
