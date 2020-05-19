@@ -16,7 +16,7 @@
             },
             series: [
                 {
-                    name: "Overview",
+                    name: "Total",
                     data: [
                         {
                             name: "Death",

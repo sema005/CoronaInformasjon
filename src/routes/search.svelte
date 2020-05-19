@@ -7,7 +7,6 @@
     import Loader from "../components/Loader.svelte"
     import Information from "../components/Information.svelte"
     import Chart from "../components/Chart.svelte"
-    export let item
     let world = []
     let searched = []
 
@@ -29,13 +28,17 @@
 
 <div class="search">
     <section>
+        {#each world as item}
 		<article>
 			<h1 class="headline">{item.Country}</h1>
             <div class="container-article">
                 <Information item={item} />
-                <!--<Chart item={item} />-->
+                <Chart item={item} />
             </div>
 		</article>		
+        {:else}
+            <Loader />
+        {/each}
     </section>
 </div>
 

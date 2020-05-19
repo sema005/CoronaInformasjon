@@ -42,14 +42,14 @@ export let item
             <img src="danger.png" alt=" ">
         </div>
         <p class="red">{item.NewDeaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
-        <p class="red">Total deaths</p>
+        <p class="red">Latest deaths</p>
     </div>
     <div class="container-info">
         <div class="img-container">
             <img src="thumbsUp.png" alt="">
         </div>            
         <p class="green">{item.NewRecovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
-        <p class="green">Total recovered</p>
+        <p class="green">Latest recovered</p>
     </div>
 </div>
 
