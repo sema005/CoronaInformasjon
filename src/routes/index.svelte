@@ -7,7 +7,6 @@
 	import Loader from "../components/Loader.svelte"
 	import World from "../components/World.svelte"
 	import { db } from "../firestore.js"
-	import Test from "../components/search.svelte"
 
 
 	let world = []
