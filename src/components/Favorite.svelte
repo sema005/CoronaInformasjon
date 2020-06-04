@@ -6,12 +6,19 @@
 
 
     const deleteFavorite = () => {
+
+        localStorage.removeItem()
     
+
+    /*
     db.collection("favorites").doc(favoritesCountry.name).delete().then(function() {
         console.log("Document successfully deleted!");
-    }).catch(function(error) {
+        }).catch(function(error) {
         console.error("Error removing document: ", error);
+
+
     });
+    */
 }
 
 </script>

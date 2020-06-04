@@ -2,12 +2,12 @@
   "bundler": "webpack",
   "shimport": null,
   "assets": {
-    "favorites": "0d6d680aa83fd351731c/favorites.favorites.js",
-    "index": "0d6d680aa83fd351731c/index.index.js",
-    "main": "0d6d680aa83fd351731c/main.js",
-    "search": "0d6d680aa83fd351731c/search.search.js",
-    "vendors~favorites~index": "0d6d680aa83fd351731c/vendors~favorites~index.vendors~favorites~index.js",
-    "vendors~search": "0d6d680aa83fd351731c/vendors~search.vendors~search.js"
+    "favorites": "51a7349ea0412907db58/favorites.favorites.js",
+    "index": "51a7349ea0412907db58/index.index.js",
+    "main": "51a7349ea0412907db58/main.js",
+    "search": "51a7349ea0412907db58/search.search.js",
+    "vendors~favorites~index": "51a7349ea0412907db58/vendors~favorites~index.vendors~favorites~index.js",
+    "vendors~search": "51a7349ea0412907db58/vendors~search.vendors~search.js"
   },
   "css": {
     "chunks": {

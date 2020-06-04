@@ -11,7 +11,7 @@
 
 	let world = []
 	let searched = []
-	let AllOverWorld
+	let AllOverWorld = []
 
     onMount( () => {
 		fetch(`Corona.json`)
@@ -20,8 +20,7 @@
 			// World
 			world = json.Countries
 			searched = world
-			AllOverWorld  = json.Global
-        }
+		}
         ).catch((err) => console.log(err))
 	} )
 
@@ -36,7 +35,7 @@
 	    let search = ""
     const filterResult = () => {
 		if(search === " "){
-			searched = world
+			searched = [world]
 		}else {
 			searched = world.filter( world => world.Country.toLowerCase().includes(search.toLowerCase()))
 		}
